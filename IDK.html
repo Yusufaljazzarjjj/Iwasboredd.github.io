@@ -1,0 +1,135 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>❤️</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poor+Story&family=Rubik:wght@400;500&display=swap"
+      rel="stylesheet" />
+
+    <style>
+                body{
+                    display: flex;
+                    justify-content: center;
+                    background: #ffffff;
+                    font-family: 'Poor Story', system-ui;
+        /* font-family: 'Rubik', sans-serif; */
+        width: 100%;
+        height: 100%;
+      }
+      .valentine{
+                    margin-top: 50px;
+                    display: flex;
+                    align-items: center;;
+                    flex-direction: column;
+                    width: 600px;
+                    height: auto;
+                }
+                h3{
+                  font-size: 25px;
+                  color: #3C486B;
+                }
+                .flex-btn{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                button{
+                    text-align: center;
+                    padding: 7px 13px;
+                    border-radius: 5px;
+                    border: none;
+                    margin-top: 40px;
+                    cursor: pointer;
+                    width: auto;
+                    height: auto;
+                }
+                #yes{
+                    background: #00DFA2;
+                    font-size: 17px;
+                    color: #ffffff;
+                    transition: 0.4s;
+                }
+                #no{
+                    background: #FF0060;
+                    font-size: 17px;
+                    color: #ffffff;
+                    transition: 0.4s;
+                }
+                #yes:hover,
+                #no:hover
+                {
+                    opacity: 0.6;
+                    transform: translateY(-5px);
+                }
+                @media (max-width: 375px) {
+                    .flex-btn
+                    {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    button{
+                    margin: 30px 10px 0;
+                    }
+                }
+    </style>
+  </head>
+  <body>
+    <div class="valentine">
+      <h3 id="titles">Tasha Will you be my Valentine ?</h3>
+      <img src="./cutecats-kitten (1).gif" alt="" id="imgCat" />
+      <div class="flex-btn">
+        <button id="yes">Yes</button>
+        <button id="no">No</button>
+      </div>
+    </div>
+  </body>
+  <script>
+            const btnYes = document.getElementById("yes");
+            const btnNo = document.getElementById("no");
+            const title = document.getElementById("titles");
+            const cat = document.getElementById("imgCat");
+            const flex = document.querySelector(".flex-btn");
+            btnYes.addEventListener("click", function() {
+            if(btnYes.innerText == "Yes") {
+                title.innerHTML = "Let's goooooo😍😍😘💖";
+                cat.src = './love-peachcat.gif';
+            }
+        });
+        btnNo.addEventListener("click", function() {
+        if (btnNo.innerText == "No") {
+            btnNo.innerText = "Are you sure babe?";
+            cat.src = './cat-please.gif';
+            btnYes.style.width = '100px';
+            btnYes.style.height = '100px';
+        } else if (btnNo.innerText == "Are you sure babe?") {
+            btnNo.innerText = "You make me gonna cry 😥";
+            cat.src = './white-cat-cats.gif';
+            btnYes.style.width = '250px';
+            btnYes.style.height = '250px';
+            flex.style.flexDirection = 'column';
+        } else if (btnNo.innerText == "You make me gonna cry 😥") {
+            btnNo.innerText = "If you don't click yes, I will eat you 🤤";
+            cat.src = './angry-cat.gif';
+            btnYes.style.width = '350px';
+            btnYes.style.height = '350px';
+            flex.style.flexDirection = 'column';
+        }else if (btnNo.innerText == "If you don't click yes, I will eat you 🤤") {
+            btnNo.innerText = "Please baby ☹️";
+            cat.src = './cat-pet.gif';
+            btnYes.style.width = '400px';
+            btnYes.style.height = '400px';
+            flex.style.flexDirection = 'column';
+        }else if (btnNo.innerText == "Please baby ☹️") {
+            btnNo.innerText = "Pleaseeeeeeeeeeeeeeeeeeeeee 🥺";
+            cat.src = './cat-pet.gif';
+            btnYes.style.width = '400px';
+            btnYes.style.height = '400px';
+            flex.style.flexDirection = 'column';
+        }
+    });
+  </script>
+</html>
